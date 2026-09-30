@@ -4,6 +4,8 @@ A touch-first EPUB/PDF reader that reads books aloud with **Piper** voices and
 highlights the spoken **sentence** (green by default) and **word** (bold or
 inverted) in sync with the audio. It's built for a Surface Go 3 (i3, Arch Linux, KDE Plasma).
 
+<img width="826" height="1140" alt="Reader" src="https://github.com/user-attachments/assets/5c947687-839e-438f-90a4-3effe1d2f8ab" />
+
 ## Why C++ / Qt Quick
 
 The Surface Go 3's dual-core i3 is the bottleneck, so the app is native C++20:
@@ -16,6 +18,7 @@ The Surface Go 3's dual-core i3 is the bottleneck, so the app is native C++20:
 * **Poppler** extracts PDF text, and a small built-in ZIP/XHTML parser reads EPUB.
 * Audio goes straight to **PipeWire/PulseAudio** (`libpulse-simple`) from its own
   thread.
+
 
 On a desktop CPU a sentence synthesizes at about 0.03–0.05 real-time factor. The
 Surface's i3 is several times slower, which still leaves plenty of headroom.
