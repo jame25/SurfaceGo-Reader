@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=SurfaceGo Reader
+GenericName=Ebook Reader with Text-to-Speech
+Comment=Read EPUB and PDF books aloud with Piper voices and synchronized highlighting
+Exec=surfacego-reader %f
+Icon=surfacego-reader
+Terminal=false
+Categories=Office;Viewer;Education;Qt;
+MimeType=application/epub+zip;application/pdf;
+Keywords=ebook;epub;pdf;tts;piper;read aloud;
+StartupWMClass=surfacego-reader

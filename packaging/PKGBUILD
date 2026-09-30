@@ -1,0 +1,23 @@
+# Local package for SurfaceGo Reader.
+# Build & install from this directory with:   makepkg -si
+pkgname=surfacego-reader
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Touch-first EPUB/PDF reader with Piper TTS and audio-locked word/sentence highlighting"
+arch=('x86_64')
+license=('custom')
+depends=('qt6-base' 'qt6-declarative' 'qt6-svg' 'poppler-qt6' 'espeak-ng' 'onnxruntime' 'libpulse' 'zlib')
+makedepends=('cmake' 'ninja')
+optdepends=('pipewire-pulse: audio output on PipeWire systems (default on KDE Plasma)')
+
+build() {
+    cmake -S "$startdir/.." -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DSGREADER_BUILD_TESTS=OFF
+    cmake --build build
+}
+
+package() {
+    DESTDIR="$pkgdir" cmake --install build
+}
