@@ -1,8 +1,8 @@
 # SurfaceGo Reader
 
 A touch-first EPUB/PDF reader that reads books aloud with **Piper** voices and
-highlights the spoken **sentence** and **word (bold)** in sync with the
-audio. It's built for a Surface Go 3 (i3, Arch Linux, KDE Plasma).
+highlights the spoken **sentence** (green by default) and **word** (bold or
+inverted) in sync with the audio. It's built for a Surface Go 3 (i3, Arch Linux, KDE Plasma).
 
 ## Why C++ / Qt Quick
 
@@ -26,7 +26,8 @@ Surface's i3 is several times slower, which still leaves plenty of headroom.
 |---|---|
 | Piper voice models (`.onnx` + `.onnx.json`), multi-speaker aware | Voice panel (footer) |
 | Voice selector and speed (`length_scale`) slider/presets | Footer → voice/speed button |
-| Green sentence highlight, bold word highlight (the bold word keeps its regular width, so the text never shifts or re-wraps) | Reader |
+| Sentence highlight in green, yellow, blue, pink or orange | Settings → Appearance |
+| Word highlight: bold or inverted colours (e.g. yellow text on a dark box inside a yellow sentence) | Settings → Appearance |
 | Highlights driven by the audio clock (no drift) | See *How sync works* |
 | Tap any word to read from that sentence | Reader |
 | Auto-scroll follows playback (toggle); pauses while you scroll by hand | Header ↓ button |
@@ -36,7 +37,9 @@ Surface's i3 is several times slower, which still leaves plenty of headroom.
 | A− / A+ font size, pinch-to-zoom, word-wrap toggle | Header |
 | Remembers reading position and scroll position per book | automatic |
 | Table of contents (EPUB nav/NCX, PDF outline or pages) | Header ☰ or swipe from left |
-| Dark theme, highlight-latency offset for Bluetooth headsets | Settings |
+| Light, sepia, dark and black backgrounds, with a live preview | Settings → Appearance |
+| Remembers window size and maximized/full-screen state between sessions | automatic |
+| Highlight-latency offset for Bluetooth headsets | Settings |
 
 ## Install on the Surface
 
@@ -105,7 +108,7 @@ report), adjust **Settings → Highlight timing offset**.
 
 | What | Where |
 |---|---|
-| Settings and reading positions | `~/.config/surfacego-reader/surfacego-reader.conf` |
+| Settings, window size and reading positions | `~/.config/surfacego-reader/surfacego-reader.conf` |
 | Parsed-book cache | `~/.cache/surfacego-reader/books/` |
 | Voices (default) | `~/.local/share/surfacego-reader/voices/` |
 
