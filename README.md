@@ -1,7 +1,7 @@
 # SurfaceGo Reader
 
 A touch-first EPUB/PDF reader that reads books aloud with **Piper** voices and
-highlights the spoken **sentence** (green by default) and **word** (bold or
+highlights the spoken **sentence** and **word** (bold or
 inverted) in sync with the audio. It's built for a Surface Go 3 (i3, Arch Linux, KDE Plasma).
 
 <img width="826" height="1140" alt="Reader" src="https://github.com/user-attachments/assets/5c947687-839e-438f-90a4-3effe1d2f8ab" />
