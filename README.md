@@ -61,8 +61,8 @@ Put Piper voices (each needs both files) into:
 
 ```
 ~/.local/share/surfacego-reader/voices/
-    jane.onnx
-    jane.onnx.json
+    voice.onnx
+    voice.onnx.json
 ```
 
 You can pick a different folder in Settings. Voices are listed in the footer's
