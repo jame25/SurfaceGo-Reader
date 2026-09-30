@@ -1,6 +1,6 @@
 # SurfaceGo Reader
 
-A touch-first EPUB/PDF reader that reads books aloud with **Piper** voices and
+A touch-first EPUB/PDF reader that reads books aloud with **Piper TTS** voices and
 highlights the spoken **sentence** and **word** (bold or
 inverted) in sync with the audio. It's built for a Surface Go 3 (i3, Arch Linux, KDE Plasma).
 
